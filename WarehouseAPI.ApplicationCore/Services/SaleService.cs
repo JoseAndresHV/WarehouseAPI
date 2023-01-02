@@ -6,7 +6,7 @@ using WarehouseAPI.ApplicationCore.Interfaces.Services;
 
 namespace WarehouseAPI.ApplicationCore.Services
 {
-    public class SaleService
+    public class SaleService : ISaleService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ITaxService _taxService;
