@@ -41,6 +41,11 @@ namespace WarehouseAPI.ApplicationCore.Services
                 throw new ProductNotFoundException(productId);
             }
 
+            if (qty <= 0)
+            {
+                throw new InvalidQtyException(qty);
+            }
+
             if (qty > product.Stock || product.Stock <= 0)
             {
                 throw new NotEnoughStockException(product.ProductName, qty);
